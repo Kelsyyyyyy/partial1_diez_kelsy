@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partial 1 Evaluation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-noche: #1b2a6b;
+            --azul: #3b6df0;
+            --azul-cielo: #dbe7ff;
+            --rosa: #ff6fae;
+            --rosa-claro: #ffe0ef;
+            --blanco: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 40px 20px 60px;
+            font-family: "Nunito", "Segoe UI", sans-serif;
+            color: var(--azul-noche);
+            background: linear-gradient(160deg, var(--azul-cielo) 0%, var(--rosa-claro) 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        main {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: "Fredoka", "Segoe UI", sans-serif;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 6vw, 3.4rem);
+            font-weight: 600;
+            background: linear-gradient(90deg, var(--azul), var(--rosa));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 1.3rem;
+            color: var(--azul);
+            margin-top: 6px;
+        }
+
+        .logo {
+            display: block;
+            margin: 18px auto 10px;
+            height: 30px;
+        }
+
+        /* Secciones */
+        .seccion {
+            background: var(--blanco);
+            border-radius: 28px;
+            padding: 26px 24px 30px;
+            margin: 28px 0;
+            box-shadow: 0 8px 0 var(--azul), 0 14px 24px rgba(27, 42, 107, .15);
+        }
+
+        .seccion.rosa {
+            box-shadow: 0 8px 0 var(--rosa), 0 14px 24px rgba(27, 42, 107, .15);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .botones {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+        }
+
+        a { text-decoration: none; }
+
+        button {
+            font-family: "Nunito", sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            width: min(100%, 360px);
+            padding: 13px 22px;
+            border: none;
+            border-radius: 999px;
+            color: var(--blanco);
+            background: var(--azul);
+            cursor: pointer;
+            transition: transform .15s ease, background .15s ease;
+        }
+
+        .rosa button { background: var(--rosa); }
+
+        button:hover { transform: scale(1.04); background: var(--azul-noche); }
+        .rosa button:hover { background: #e0488d; }
+
+        a:focus-visible button {
+            outline: 3px solid var(--azul-noche);
+            outline-offset: 3px;
+        }
+
+        /* Botón de Mario */
+        .mario {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 10px 24px;
+            border-radius: 999px;
+            background: var(--rosa);
+            color: var(--blanco);
+            font-weight: 700;
+            transition: transform .15s ease;
+        }
+
+        .mario:hover { transform: rotate(-3deg) scale(1.06); }
+
+        /* Tarjeta de estudiante */
+        .estudiante p { margin: 8px 0 20px; font-weight: 600; }
+
+        .estudiante h2 {
+            font-size: 1.8rem;
+            color: var(--azul-noche);
+        }
+
+        .foto {
+            width: 400px;
+            height: 400px;
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid var(--rosa);
+            box-shadow: 0 0 0 8px var(--azul), 0 14px 28px rgba(27, 42, 107, .25);
+            margin: 10px auto 14px;
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            .foto { height: auto; aspect-ratio: 1 / 1; }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Partial 1 INDEX</h1>
+        <h2>Quality Topics For Software Design</h2>
+        <img class="logo" src="/images/logo.webp" height="30" alt="Logo">
+
+        <a class="mario" href="marioindex.html" target="_self" title="Play mario game">Play Mario</a>
+
+        <section class="seccion">
+            <h3>Flowchart section</h3>
+            <div class="botones">
+                <a href="/works/diez_practice.html"><button>Diagram 1 - Main process</button></a>
+                <a href="/works/diez_homework1.html"><button>Diagram 2 - Clients</button></a>
+                <a href="/works/diez_homework2.html"><button>Diagram 3 - Money</button></a>
+            </div>
+        </section>
+
+        <section class="seccion rosa">
+            <h3>Use case diagram section</h3>
+            <div class="botones">
+                <a href="/works/caso_1.html"><button>Diagram 1 - Programmer actor</button></a>
+                <a href="/works/caso_2.html"><button>Diagram 2 - User actor</button></a>
+                <a href="/works/caso_3.html"><button>Diagram 3 - Client actor</button></a>
+            </div>
+        </section>
+
+        <section class="seccion estudiante">
+            <h3>Student:</h3>
+            <h2>Kelsy Diez</h2>
+            <p>EMAIL: kelsy_3142250013@utd.edu.mx</p>
+            <img class="foto" src="/images/photo.jpg" width="400" height="400" alt="Foto de Kelsy Diez">
+        </section>
+    </main>
+</body>
+</html>
